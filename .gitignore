@@ -33,3 +33,6 @@ build/
 /out/
 .idea_modules/
 atlassian-ide-plugin.xml
+
+RemoteSystemsTempFiles/
+Servers/
