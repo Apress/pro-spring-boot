@@ -36,3 +36,9 @@ atlassian-ide-plugin.xml
 
 RemoteSystemsTempFiles/
 Servers/
+.project
+.recommenders
+.classpath
+mvnw*
+.mvn*
+*/.gitignore
