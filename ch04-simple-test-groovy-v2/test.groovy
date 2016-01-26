@@ -1,8 +1,8 @@
 class SimpleWebTest {
 
     @Test
-    void indexTest() {
-         assertEquals("Spring Boot Rocks!", new SimpleWebApp().index())
+    void greetingsTest() {
+         assertEquals("Spring Boot Rocks!", new WebApp().greetings())
     }
 
 }

@@ -1,7 +1,7 @@
 @RestController
-class SimpleWebApp{
+class WebApp{
     @RequestMapping("/")
-    String index(){
+    String greetings(){
         "Spring Boot Rocks!"
     }
 }
