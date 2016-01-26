@@ -2,6 +2,6 @@
 class WebApp{
     @RequestMapping("/")
     String greetings(){
-       "<h1>Spring Boot Rocks</h1>\nHello World!"
+       "Spring Boot Rocks"
     }
 }
