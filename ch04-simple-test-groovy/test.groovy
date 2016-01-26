@@ -1,10 +1,9 @@
-@Grab('spring-boot-starter-test')
 
 class MyTest{    
 	
 	@Test
-	void testService() {
-		String str= "JUnit works"
-		assertEquals "JUnit works",str 
+	void simple() {
+		String str= "JUnit works with Spring Boot"
+		assertEquals "JUnit works with Spring Boot",str 
 	}
 }
