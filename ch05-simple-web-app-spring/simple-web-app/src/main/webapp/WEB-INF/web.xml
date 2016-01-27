@@ -1,0 +1,17 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>SimpleServlet</servlet-name>
+  	<display-name>SimpleServlet</display-name>
+  	<description>A simple Servlet</description>
+  	<servlet-class>com.apress.j2ee.SimpleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SimpleServlet</servlet-name>
+  	<url-pattern>/SimpleServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
