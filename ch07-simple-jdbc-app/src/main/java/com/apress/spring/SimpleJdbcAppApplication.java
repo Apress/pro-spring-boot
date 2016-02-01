@@ -24,7 +24,7 @@ public class SimpleJdbcAppApplication implements CommandLineRunner{
 	public void run(String... arg0) throws Exception {
 		log.info("@@ Inserting Data....");
 		service.insertData();
-		log.info("@@ findJournal call...");
-		service.findJournal().forEach(entry -> log.info(entry.toString()));
+		log.info("@@ findAll() call...");
+		service.findAll().forEach(entry -> log.info(entry.toString()));
 	}
 }

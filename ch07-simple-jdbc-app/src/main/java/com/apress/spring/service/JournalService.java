@@ -31,13 +31,12 @@ public class JournalService {
 		log.info("> Done.");
 	}
 	
-	public List<Journal> findJournal(){
+	public List<Journal> findAll(){
 		List<Journal> entries = new ArrayList<>();
 		jdbcTemplate.query("SELECT * FROM JOURNAL", 
 					new Object[]{}, 
 					(rs,row) -> new Journal(rs.getLong("id"), rs.getString("title"), rs.getString("summary"),new Date(rs.getTimestamp("created").getTime())))
 				.forEach(entry -> entries.add(entry));
-		
 		return entries;
 	}
 }
