@@ -14,5 +14,5 @@ public interface JournalRepository extends JpaRepository<Journal, Long> {
 	List<Journal> findByCreatedAfter(Date date);
 	
 	@Query("select j from Journal j where j.title like %?1%")
-	List<Journal> findByCustomQuery(String title);
+	List<Journal> findByCustomQuery(String word);
 }
