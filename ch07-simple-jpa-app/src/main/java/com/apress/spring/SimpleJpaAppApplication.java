@@ -14,16 +14,13 @@ import com.apress.spring.service.JournalService;
 @SpringBootApplication
 public class SimpleJpaAppApplication {
 	private static final Logger log = LoggerFactory.getLogger(SimpleJpaAppApplication.class);
-	
-	@Autowired
-	JournalService service;
-	
+		
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleJpaAppApplication.class, args);
 	}
 	
 	@Bean
-	CommandLineRunner start(JournalRepository repo){
+	CommandLineRunner start(JournalService service){
 		return args -> {
 			log.info("@@ Inserting Data....");
 			service.insertData();
