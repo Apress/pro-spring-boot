@@ -17,7 +17,7 @@ public class WebSocketController {
 	@RequestMapping("/send/{topic}")
 	public String sender(@PathVariable String topic, @RequestParam String message){
 		producer.sendMessageTo(topic, message);
-		return "{ \"code\": \"OK\" }";
+		return "OK-Sent";
 	}
 	
 }
