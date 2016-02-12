@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Boot WebSocket Messaging</title>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/sockjs/1.0.3/sockjs.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+    <div>
+        <h3>Messages:</h3>
+        <ol id="messages"></ol>
+    </div>   
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var messageList = $("#messages");
+            var socket = new SockJS('/stomp');
+            var stompClient = Stomp.over(socket);
+
+            stompClient.connect({ }, function(frame) {
+                stompClient.subscribe("/topic/message", function(data) {
+                    var message = data.body;
+                    messageList.append("<li>" + message + "</li>");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
