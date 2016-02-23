@@ -1,5 +1,20 @@
 ### Spring Boot in the Cloud : Cloud Foundry
 
+You can use the cloud-connectors as well and get the DataSource.
+
+##pom.xml
+```xml
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-spring-service-connector</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-cloudfoundry-connector</artifactId>
+	</dependency>
+```
+
+## Code
 ```java
 package com.apress.spring.config;
 
