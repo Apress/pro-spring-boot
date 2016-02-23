@@ -1,6 +1,6 @@
 ### Spring Boot in the Cloud : Cloud Foundry
 
-You can use the cloud-connectors as well and get the DataSource.
+You can use the __cloud-connectors__ as well and get the DataSource.
 
 ##pom.xml
 ```xml
