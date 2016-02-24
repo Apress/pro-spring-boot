@@ -37,7 +37,7 @@ public class CloudDataSourceConfig extends AbstractCloudConfig {
 ```
 
 ### Runing local (no Cloud Foundry) emulate cloud profile
-__VCAP_APPLICATION___
+__VCAP_APPLICATION__
 ```json
 {
     "application_name": "journal",
@@ -52,7 +52,7 @@ __VCAP_APPLICATION___
 }
 ```
 
-__VCAP_SERVICES___
+__VCAP_SERVICES__
 ```json
 {
     "p-mysql": [
