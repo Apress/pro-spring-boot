@@ -1,8 +1,8 @@
-### Spring Boot in the Cloud : Cloud Foundry
+# Spring Boot in the Cloud : Cloud Foundry
 
 You can use the __cloud-connectors__ as well and get the DataSource.
 
-##pom.xml
+###pom.xml
 ```xml
 	<dependency>
 		<groupId>org.springframework.cloud</groupId>
@@ -14,7 +14,7 @@ You can use the __cloud-connectors__ as well and get the DataSource.
 	</dependency>
 ```
 
-## Code
+### Code
 ```java
 package com.apress.spring.config;
 
@@ -33,5 +33,40 @@ public class CloudDataSourceConfig extends AbstractCloudConfig {
     public DataSource dataSource() {
         return connectionFactory().dataSource();
     }
+}
+```
+
+### Runing local (no Cloud Foundry) emulate cloud profile
+__VCAP_APPLICATION___
+```json
+{
+    "application_name": "journal",
+    "application_uris": [""],
+    "application_version": "1",
+    "host": "localhost",
+	"port": 8080,
+    "instance_id": "abcd",
+    "instance_index": 0,
+    "name": "journal",
+    "version": "1.0"
+}
+```
+
+__VCAP_SERVICES___
+```json
+{
+    "p-mysql": [
+        {
+            "credentials": {
+                "uri": "jdbc:mysql://localhost/journal?user=spring&password=springboot"
+            },
+            "label": "MySQL Service",
+            "name": "p-mysql",
+            "plan": "100mb-dev",
+            "tags": [
+                "mysql"
+            ]
+        }
+    ]
 }
 ```
