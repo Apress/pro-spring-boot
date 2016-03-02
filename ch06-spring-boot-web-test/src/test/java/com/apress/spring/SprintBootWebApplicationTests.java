@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -56,9 +55,6 @@ public class SprintBootWebApplicationTests {
     void setConverters(HttpMessageConverter<?>[] converters) {
         this.mappingJackson2HttpMessageConverter = Arrays.asList(converters).stream().filter(
                 converter -> converter instanceof MappingJackson2HttpMessageConverter).findAny().get();
-
-        Assert.assertNotNull("You should have a JSON library in your path, this should not be null",
-                this.mappingJackson2HttpMessageConverter);
     }
 	
 	@Before
@@ -96,7 +92,6 @@ public class SprintBootWebApplicationTests {
 	protected String toJsonString(Object obj) throws IOException {
         MockHttpOutputMessage mockHttpOutputMessage = new MockHttpOutputMessage();
         this.mappingJackson2HttpMessageConverter.write(obj, MediaType.APPLICATION_JSON, mockHttpOutputMessage);
-        System.out.println(mockHttpOutputMessage.getBodyAsString());
         return mockHttpOutputMessage.getBodyAsString();
     }
 }
