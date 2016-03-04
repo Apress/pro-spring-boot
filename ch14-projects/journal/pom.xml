@@ -3,12 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.apress.spring</groupId>
-	<artifactId>journal-spring-boot</artifactId>
+	<artifactId>journal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Extending Spring Boot</name>
 
 	<modules>
+		<module>spring-boot-journal</module>
 		<module>journal-spring-boot-autoconfigure</module>
 		<module>journal-spring-boot-starter</module>
 	</modules>
