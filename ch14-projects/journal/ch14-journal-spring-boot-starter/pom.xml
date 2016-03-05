@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>journal-spring-boot-starter</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Spring Boot Journal Starter</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
