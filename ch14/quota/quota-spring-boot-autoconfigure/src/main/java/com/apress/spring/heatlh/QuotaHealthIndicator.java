@@ -8,7 +8,11 @@ public class QuotaHealthIndicator implements HealthIndicator{
 	
 	@Override
 	public Health health() {
-		return Health.up().withDetail("jejeje.jajajaja", "hola").build();
+		return Health.up().withDetail("quota.size", getSize()).build();
 	}
 
+	protected String getSize(){
+		//Step. Process to get the Size
+		return "12304 bytes";
+	}
 }
