@@ -80,7 +80,7 @@ public class JournalAutoConfiguration extends RepositoryRestMvcConfiguration {
 			protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response)
 					throws Exception {
 				ModelAndView model = new ModelAndView();
-				model.setViewName("index");
+				model.setViewName("journal");
 				model.addObject("journal", repo.findAll());
 				return model;
 			}

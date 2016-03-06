@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="description" content=""></meta>
+    <meta name="author" content=""></meta>
+    <title>Spring Boot Calendar</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="css/cover.css" rel="stylesheet"></link>
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Spring Boot Calendar</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a th:href="${journal.contextPath}">Journal</a></li>
+                  <li><a th:href="${journal.apiPath}">API</a></li>
+                  <li><a th:href="${journal.apiPath} + '/journal/search'">Search</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Spring Boot Calendar</h1>
+            <p class="lead">This is a small Calendar application, showing the power of Spring Boot auto-configuration features. 
+            This Calendar application also provides you a full access to the Journal Web UI</p>
+            <p class="lead">
+              <a th:href="${journal.contextPath}" class="btn btn-lg btn-default">Journal</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Spring Boot Calendar, powered by <a href="http://projects.spring.io/spring-boot/">Spring Boot</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
