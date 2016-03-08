@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootJournalApplication {
+public class SpringBootJournalSecureApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootJournalApplication.class, args);
+		SpringApplication.run(SpringBootJournalSecureApplication.class, args);
 	}
 }
